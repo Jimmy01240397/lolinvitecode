@@ -7,6 +7,7 @@ def loadData(url, code):
     headers = {
         'content-type':'application/json',
         'Accept-encoding':'gzip,deflate',
+	'User-Agent':'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) LeagueOfLegendsClient/11.15.388.2387 (CEF 74) Safari/537.36',
         'token':'[你的Token]'
     }
     datajson = {"code":code,"confirm":True}
