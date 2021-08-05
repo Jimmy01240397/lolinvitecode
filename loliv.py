@@ -14,7 +14,9 @@ def loadData(url, code):
         'Referer': 'https://bargain.lol.garena.tw/?token=' + token,
 	'token':token
     }
-    datajson = {"code":code,"confirm":True}
+    datajson = {"code":code,"confirm":False}
+    r = requests.post(url, headers = headers, json=datajson)
+    datajson["confirm"] = True
     r = requests.post(url, headers = headers, json=datajson)
     return r
 
